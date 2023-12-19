@@ -18,26 +18,26 @@ function Contact() {
         history.push("/Thank-you!")
     };
     return (
-    <div className="mx-auto">
-    <form ref={form} onSubmit={sendEmail} className="shadow m-5 p-5" style={{backgroundColor: "#cbe3f2"}}>
-        <div className=" row justify-content-between mb-3">
-            <label htmlFor="user_name">Name:</label>
-            <input name="user_name" type="text"></input>                    
-        </div>    
-        <div className=" row justify-content-between mb-3">
-            <label htmlFor="user_email">Email Address:</label>
-            <input name="user_email" type="email" required/>                    
+    <div className="mx-auto container">
+    <form ref={form} onSubmit={sendEmail} className="shadow m-5 p-5 bg-secondary">
+        <div className="row justify-content-between mb-3">
+            <label className="col-sm-6" htmlFor="user_name">Name:</label>
+            <input className="col-sm-6" name="user_name" type="text"></input>                    
+        </div>
+        <div className="row justify-content-between mb-3">
+            <label className="col-sm-6" htmlFor="user_email">Email Address:</label>
+            <input className="col-sm-6" name="user_email" type="email" required/>                    
         </div>
 
-        <div className=" row justify-content-between mb-3">
-            <label htmlFor="">Message:</label>
-            <textarea cols="23" name="message"/>                    
+        <div className="row justify-content-between mb-3">
+            <label className="col-sm-6" htmlFor="">Message:</label>
+            <textarea className="col-sm-6" cols="23" name="message"/>                    
         </div>
         <div className="row">
             <div className="col-md-2"></div>
-            <button type="button" onClick={() => { history.goBack()}} className="col-sm-12 col-md-3 btn btn-secondary">Cancel</button>
+            <button type="button" onClick={() => { history.goBack()}} className="col-md-3 btn btn-dark">Cancel</button>
             <div className="col-md-2"></div>
-            <button type="submit" className="col-sm-12 col-md-3 btn btn-warning">Submit</button>
+            <button type="submit" className="col-md-3 btn btn-success">Submit</button>
             <div className="col-md-2"></div>
         </div>
     </form>
